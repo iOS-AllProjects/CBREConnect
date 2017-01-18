@@ -93,6 +93,12 @@ class LoginViewController: UIViewController {
         
         //select the tapped button
         sender.isSelected = true
+        
+        //Change images of buttons
+        personButton.setImage(UIImage(named: "Person_Icon"), for: .selected)
+        startUpButton.setImage(UIImage(named: "StartUp_Selected_Icon"), for: .selected)
+        corporateButton.setImage(UIImage(named: "Corporate_Selected_Icon"), for: .selected)
+
     }
     
     @IBAction func proceedButtonTapped(_ sender: UIButton) {
