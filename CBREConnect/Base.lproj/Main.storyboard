@@ -365,9 +365,6 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afB-kz-dU5">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="187.5" id="RD6-6K-JgW"/>
-                                                </constraints>
                                                 <state key="normal" title="SIGN IN">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -388,6 +385,9 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="afB-kz-dU5" firstAttribute="width" secondItem="gNr-IE-FC7" secondAttribute="width" id="XSK-Ti-z2c"/>
+                                        </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfU-3k-UbU">
                                         <rect key="frame" x="104" y="491" width="167" height="30"/>
@@ -1131,147 +1131,147 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVe-Jb-snh">
-                                <rect key="frame" x="16" y="546" width="343" height="37"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="Clear Filters"/>
-                                <connections>
-                                    <action selector="clearFiltersButtonTapped:" destination="sqN-x8-IAD" eventType="touchUpInside" id="zhB-pO-pC2"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILTER BY DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxC-Z6-eiX">
-                                <rect key="frame" x="16" y="12" width="117" height="22"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILTER BY TAGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahk-cM-GL1">
-                                <rect key="frame" x="16" y="337" width="117" height="22"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cuP-g6-8zc">
-                                <rect key="frame" x="16" y="367" width="343" height="171"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="171" id="Mxg-fc-jT2"/>
-                                </constraints>
-                                <collectionViewLayout key="collectionViewLayout" id="Jck-BT-h0d" customClass="TagFlowLayout" customModule="CBREConnect" customModuleProvider="target"/>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCell" id="zfJ-iz-K3r" customClass="TagCell" customModule="CBREConnect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="sqN-x8-IAD" id="cof-CD-Rmz"/>
-                                    <outlet property="delegate" destination="sqN-x8-IAD" id="JOx-Rp-3Du"/>
-                                </connections>
-                            </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SELECTED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGh-yD-swF">
-                                <rect key="frame" x="16" y="294" width="82.5" height="22"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="251" ambiguous="YES" text="20.12.2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69u-0g-l5C">
-                                <rect key="frame" x="107" y="294" width="214" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="214" id="xkd-FE-rC9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xf5-5z-VUP">
-                                <rect key="frame" x="329" y="290" width="30" height="30"/>
-                                <state key="normal" image="Clear_Icon"/>
-                                <connections>
-                                    <action selector="clearFilterDateLabelButtonTapped:" destination="sqN-x8-IAD" eventType="touchUpInside" id="jbB-52-ccl"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amc-GF-vIT" userLabel="BottomView">
-                                <rect key="frame" x="16" y="328" width="343" height="1"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="Ieq-LI-0Ma"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYK-AF-siy" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="4"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="4" id="Xjn-Zj-Qpt"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RxV-es-iAe" userLabel="FilterStackView">
-                                <rect key="frame" x="131" y="42" width="113" height="16"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Ixa-uv-HjB">
+                                <rect key="frame" x="14" y="12" width="345" height="573"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHi-4G-fdm">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="16"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                        <state key="normal" title="DAY"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILTER BY DATE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxC-Z6-eiX">
+                                        <rect key="frame" x="1" y="0.0" width="343" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="D74-H3-KYX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yEl-l4-cXn">
+                                        <rect key="frame" x="118.5" y="28" width="108" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHi-4G-fdm">
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="32"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                <state key="normal" title="DAY"/>
+                                                <connections>
+                                                    <action selector="dayAndMonthFilterButtonsTapped:" destination="sqN-x8-IAD" eventType="touchUpInside" id="vGC-a2-oGF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypQ-1f-RlE">
+                                                <rect key="frame" x="54" y="0.0" width="54" height="32"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                <state key="normal" title="MONTH"/>
+                                                <connections>
+                                                    <action selector="dayAndMonthFilterButtonsTapped:" destination="sqN-x8-IAD" eventType="touchUpInside" id="NVO-QG-twM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="PHi-4G-fdm" firstAttribute="width" secondItem="ypQ-1f-RlE" secondAttribute="width" id="kdV-Ml-X2p"/>
+                                        </constraints>
+                                    </stackView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6g-qk-UL5">
+                                        <rect key="frame" x="12.5" y="66" width="320" height="216"/>
                                         <connections>
-                                            <action selector="dayAndMonthFilterButtonsTapped:" destination="sqN-x8-IAD" eventType="touchUpInside" id="vGC-a2-oGF"/>
+                                            <outlet property="dataSource" destination="sqN-x8-IAD" id="AxQ-hP-CwT"/>
+                                            <outlet property="delegate" destination="sqN-x8-IAD" id="guM-MN-UEX"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypQ-1f-RlE">
-                                        <rect key="frame" x="59" y="0.0" width="54" height="16"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                        <state key="normal" title="MONTH"/>
+                                    </pickerView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LL4-9Y-wrI">
+                                        <rect key="frame" x="24" y="288" width="297" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECTED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGh-yD-swF">
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="97" id="Iaa-9Z-mAI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="251" text="20.12.2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69u-0g-l5C">
+                                                <rect key="frame" x="127" y="0.0" width="100" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="tAk-ix-5mH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xf5-5z-VUP">
+                                                <rect key="frame" x="257" y="0.0" width="40" height="30"/>
+                                                <state key="normal" image="Clear_Icon"/>
+                                                <connections>
+                                                    <action selector="clearFilterDateLabelButtonTapped:" destination="sqN-x8-IAD" eventType="touchUpInside" id="jbB-52-ccl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amc-GF-vIT" userLabel="BottomView">
+                                        <rect key="frame" x="1" y="324" width="343" height="1"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Gto-6w-d2I"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILTER BY TAGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahk-cM-GL1">
+                                        <rect key="frame" x="1" y="331" width="343" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="Bb4-ak-mfe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cuP-g6-8zc">
+                                        <rect key="frame" x="1" y="359" width="343" height="171"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="DbL-ty-A6O"/>
+                                        </constraints>
+                                        <collectionViewLayout key="collectionViewLayout" id="Jck-BT-h0d" customClass="TagFlowLayout" customModule="CBREConnect" customModuleProvider="target"/>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCell" id="zfJ-iz-K3r" customClass="TagCell" customModule="CBREConnect" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
                                         <connections>
-                                            <action selector="dayAndMonthFilterButtonsTapped:" destination="sqN-x8-IAD" eventType="touchUpInside" id="NVO-QG-twM"/>
+                                            <outlet property="dataSource" destination="sqN-x8-IAD" id="cof-CD-Rmz"/>
+                                            <outlet property="delegate" destination="sqN-x8-IAD" id="JOx-Rp-3Du"/>
+                                        </connections>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVe-Jb-snh">
+                                        <rect key="frame" x="1" y="536" width="343" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="3aq-cS-DUT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                        <state key="normal" title="Clear Filters"/>
+                                        <connections>
+                                            <action selector="clearFiltersButtonTapped:" destination="sqN-x8-IAD" eventType="touchUpInside" id="zhB-pO-pC2"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6g-qk-UL5">
-                                <rect key="frame" x="27" y="66" width="320" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="sqN-x8-IAD" id="AxQ-hP-CwT"/>
-                                    <outlet property="delegate" destination="sqN-x8-IAD" id="guM-MN-UEX"/>
-                                </connections>
-                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYK-AF-siy" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="4"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="J6m-Ri-2fV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="RxV-es-iAe" firstAttribute="top" secondItem="MxC-Z6-eiX" secondAttribute="bottom" constant="8" id="2w5-iw-OMd"/>
-                            <constraint firstItem="amc-GF-vIT" firstAttribute="top" secondItem="nGh-yD-swF" secondAttribute="bottom" constant="12" id="4Tp-eK-9Wh"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="nGh-yD-swF" secondAttribute="leading" id="5WB-AD-JcQ"/>
-                            <constraint firstItem="FYK-AF-siy" firstAttribute="top" secondItem="lxC-0E-ji3" secondAttribute="bottom" id="9fu-Sf-B6A"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="b6g-qk-UL5" secondAttribute="trailing" constant="12" id="A3U-V8-oUr"/>
-                            <constraint firstItem="Xf5-5z-VUP" firstAttribute="leading" secondItem="69u-0g-l5C" secondAttribute="trailing" constant="8" id="ELA-FN-ucd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="amc-GF-vIT" secondAttribute="trailing" id="Eo0-ik-5Yp"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="MxC-Z6-eiX" secondAttribute="leading" id="Mab-fk-Pfa"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="ahk-cM-GL1" secondAttribute="leading" id="McJ-tm-5OC"/>
-                            <constraint firstItem="b6g-qk-UL5" firstAttribute="top" secondItem="RxV-es-iAe" secondAttribute="bottom" constant="8" id="P2F-9d-yIN"/>
-                            <constraint firstItem="9ha-GJ-VXO" firstAttribute="top" secondItem="TVe-Jb-snh" secondAttribute="bottom" constant="20" id="Pw5-UP-Y3e"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TVe-Jb-snh" secondAttribute="trailing" id="R1H-P6-VcN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RxV-es-iAe" secondAttribute="trailing" constant="115" id="T80-yc-fiD"/>
-                            <constraint firstItem="b6g-qk-UL5" firstAttribute="leading" secondItem="5aJ-mx-3RE" secondAttribute="leadingMargin" constant="11" id="XXG-TS-x9r"/>
-                            <constraint firstItem="TVe-Jb-snh" firstAttribute="top" secondItem="cuP-g6-8zc" secondAttribute="bottom" constant="8" id="adb-xK-9eG"/>
-                            <constraint firstItem="MxC-Z6-eiX" firstAttribute="top" secondItem="FYK-AF-siy" secondAttribute="bottom" constant="8" id="eP2-Q2-oN5"/>
-                            <constraint firstItem="RxV-es-iAe" firstAttribute="leading" secondItem="5aJ-mx-3RE" secondAttribute="leadingMargin" constant="115" id="eSy-A4-cBh"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="amc-GF-vIT" secondAttribute="leading" id="ed2-ht-b0f"/>
-                            <constraint firstItem="amc-GF-vIT" firstAttribute="top" secondItem="69u-0g-l5C" secondAttribute="bottom" constant="12" id="gQ3-Ly-0hS"/>
-                            <constraint firstItem="cuP-g6-8zc" firstAttribute="top" secondItem="ahk-cM-GL1" secondAttribute="bottom" constant="8" id="hzk-JK-0EM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cuP-g6-8zc" secondAttribute="trailing" id="iOk-VU-y0W"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Xf5-5z-VUP" secondAttribute="trailing" id="ik6-Bh-bwW"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="TVe-Jb-snh" secondAttribute="leading" id="m3H-Zg-gWw"/>
-                            <constraint firstItem="69u-0g-l5C" firstAttribute="top" secondItem="b6g-qk-UL5" secondAttribute="bottom" constant="12" id="mCh-Mt-78O"/>
-                            <constraint firstItem="ahk-cM-GL1" firstAttribute="top" secondItem="amc-GF-vIT" secondAttribute="bottom" constant="8" id="n4G-KS-qfw"/>
-                            <constraint firstItem="FYK-AF-siy" firstAttribute="leading" secondItem="5aJ-mx-3RE" secondAttribute="leadingMargin" constant="-16" id="o0A-U6-eJL"/>
-                            <constraint firstItem="69u-0g-l5C" firstAttribute="leading" secondItem="nGh-yD-swF" secondAttribute="trailing" constant="8" id="qgN-3D-6lV"/>
-                            <constraint firstItem="amc-GF-vIT" firstAttribute="top" secondItem="Xf5-5z-VUP" secondAttribute="bottom" constant="8" id="sM6-Yi-QiW"/>
-                            <constraint firstItem="Xf5-5z-VUP" firstAttribute="top" secondItem="b6g-qk-UL5" secondAttribute="bottom" constant="8" id="uDQ-At-LPv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FYK-AF-siy" secondAttribute="trailing" constant="-16" id="v8Q-rT-QVu"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="cuP-g6-8zc" secondAttribute="leading" id="vgg-mW-Rq5"/>
-                            <constraint firstItem="nGh-yD-swF" firstAttribute="top" secondItem="b6g-qk-UL5" secondAttribute="bottom" constant="12" id="vy6-l8-9TO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ixa-uv-HjB" secondAttribute="trailing" id="AB7-gi-6pN"/>
+                            <constraint firstItem="9ha-GJ-VXO" firstAttribute="top" secondItem="Ixa-uv-HjB" secondAttribute="bottom" constant="18" id="Ff9-oN-kTg"/>
+                            <constraint firstItem="Ixa-uv-HjB" firstAttribute="leading" secondItem="5aJ-mx-3RE" secondAttribute="leadingMargin" constant="-2" id="IJq-Dn-OTJ"/>
+                            <constraint firstItem="Ixa-uv-HjB" firstAttribute="top" secondItem="FYK-AF-siy" secondAttribute="bottom" constant="8" id="JMq-87-4W4"/>
+                            <constraint firstItem="FYK-AF-siy" firstAttribute="leading" secondItem="5aJ-mx-3RE" secondAttribute="leading" id="eZd-x4-YEb"/>
+                            <constraint firstItem="FYK-AF-siy" firstAttribute="top" secondItem="lxC-0E-ji3" secondAttribute="bottom" id="hgL-w2-nma"/>
+                            <constraint firstAttribute="trailing" secondItem="FYK-AF-siy" secondAttribute="trailing" id="inm-4v-86p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Filters" id="K1d-4F-jxD">
@@ -1291,7 +1291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUT-o4-ryU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6481" y="-1916"/>
+            <point key="canvasLocation" x="6480.8000000000002" y="-1916.4917541229386"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="oHw-89-UdI">

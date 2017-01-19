@@ -373,6 +373,10 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
     void (^_completion)(void);
 }
 
+- (void)pauseInteractiveTransition {
+    // not supported
+}
+
 
 - (id)initWithRevealController:(SWRevealViewController*)revealVC containerView:(UIView*)view fromVC:(UIViewController*)fromVC
     toVC:(UIViewController*)toVC completion:(void (^)(void))completion
@@ -762,7 +766,11 @@ const int FrontViewPositionNone = 0xff;
 }
 
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 90000
 - (NSUInteger)supportedInterfaceOrientations
+#else
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+#endif
 {
     // we could have simply not implemented this, but we choose to call super to make explicit that we
     // want the default behavior.
