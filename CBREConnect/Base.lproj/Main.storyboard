@@ -119,23 +119,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Facade" translatesAutoresizingMaskIntoConstraints="NO" id="P7l-Wx-QRY" userLabel="Facade">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="CBRE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gH4-Wl-Tcm">
-                                <rect key="frame" x="107" y="20" width="150" height="43"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.37176785690000003" blue="0.1469191721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONNECT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrZ-Qg-PdG">
-                                <rect key="frame" x="107" y="54" width="150" height="33"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="zfX-tk-qBe">
-                                <rect key="frame" x="0.0" y="92" width="375" height="575"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="RCh-Pj-s5C">
+                                        <rect key="frame" x="112.5" y="0.0" width="150" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="gab-D7-bod"/>
+                                            <constraint firstAttribute="width" constant="150" id="qbC-AE-XAP"/>
+                                        </constraints>
+                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="5YN-3Y-Ord">
-                                        <rect key="frame" x="17.5" y="0.0" width="340" height="78"/>
+                                        <rect key="frame" x="17.5" y="95" width="340" height="78"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vvE-eC-xLx">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="78"/>
@@ -239,7 +234,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uY6-oe-a6i">
-                                        <rect key="frame" x="17" y="128" width="341" height="70"/>
+                                        <rect key="frame" x="17" y="223" width="341" height="70"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="B7O-EJ-gQK">
                                                 <rect key="frame" x="0.0" y="0.0" width="341" height="30"/>
@@ -336,7 +331,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xzW-rF-CUg">
-                                        <rect key="frame" x="127.5" y="248" width="120" height="69"/>
+                                        <rect key="frame" x="127.5" y="343" width="120" height="69"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jos-Sf-jhi">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="36"/>
@@ -364,7 +359,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seJ-AC-PT9">
-                                        <rect key="frame" x="0.0" y="367" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="462" width="375" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afB-kz-dU5">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="34"/>
@@ -393,7 +388,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfU-3k-UbU">
-                                        <rect key="frame" x="104" y="451" width="167" height="124"/>
+                                        <rect key="frame" x="104" y="546" width="167" height="101"/>
                                         <state key="normal" title="SIGN IN WITH LINKEDIN">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -408,17 +403,11 @@
                             <constraint firstItem="aa0-3s-OGz" firstAttribute="top" secondItem="P7l-Wx-QRY" secondAttribute="bottom" id="690-PX-RyW"/>
                             <constraint firstItem="P7l-Wx-QRY" firstAttribute="top" secondItem="Cdd-A4-HLE" secondAttribute="top" id="94T-Bd-oKC"/>
                             <constraint firstItem="aa0-3s-OGz" firstAttribute="top" secondItem="zfX-tk-qBe" secondAttribute="bottom" id="DhF-eS-w4M"/>
-                            <constraint firstItem="wrZ-Qg-PdG" firstAttribute="top" secondItem="gH4-Wl-Tcm" secondAttribute="bottom" constant="-9" id="EZX-rj-c35"/>
                             <constraint firstItem="P7l-Wx-QRY" firstAttribute="leading" secondItem="Cdd-A4-HLE" secondAttribute="leading" id="GE2-vl-xgL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gH4-Wl-Tcm" secondAttribute="trailing" priority="749" constant="102" id="HjT-73-6GZ"/>
                             <constraint firstItem="zfX-tk-qBe" firstAttribute="leading" secondItem="Cdd-A4-HLE" secondAttribute="leading" id="XXG-Nm-3m0"/>
-                            <constraint firstItem="gH4-Wl-Tcm" firstAttribute="top" secondItem="uwC-5g-QvU" secondAttribute="bottom" id="XuV-Ff-NWl"/>
-                            <constraint firstItem="gH4-Wl-Tcm" firstAttribute="leading" secondItem="Cdd-A4-HLE" secondAttribute="leadingMargin" priority="749" constant="91" id="YhH-cw-RZ7"/>
                             <constraint firstItem="aP2-Pr-bsZ" firstAttribute="top" secondItem="Cdd-A4-HLE" secondAttribute="top" id="Z1q-A2-Mqv"/>
-                            <constraint firstItem="wrZ-Qg-PdG" firstAttribute="leading" secondItem="Cdd-A4-HLE" secondAttribute="leadingMargin" priority="749" constant="91" id="cY2-v4-1Qb"/>
                             <constraint firstAttribute="trailing" secondItem="aP2-Pr-bsZ" secondAttribute="trailing" id="dLO-hh-zSB"/>
-                            <constraint firstItem="zfX-tk-qBe" firstAttribute="top" secondItem="wrZ-Qg-PdG" secondAttribute="bottom" constant="5" id="efM-hi-B1c"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wrZ-Qg-PdG" secondAttribute="trailing" priority="749" constant="102" id="iL0-Dg-L24"/>
+                            <constraint firstItem="zfX-tk-qBe" firstAttribute="top" secondItem="uwC-5g-QvU" secondAttribute="bottom" id="hnN-gS-XJk"/>
                             <constraint firstAttribute="trailing" secondItem="zfX-tk-qBe" secondAttribute="trailing" id="sAD-nm-NON"/>
                             <constraint firstItem="aa0-3s-OGz" firstAttribute="top" secondItem="aP2-Pr-bsZ" secondAttribute="bottom" id="tg1-Hf-P0I"/>
                         </constraints>
@@ -2579,6 +2568,7 @@ To access the pre-populated application, you will need to register as an applica
         <image name="Heart_Icon" width="34" height="29"/>
         <image name="Id_Icon" width="120" height="102"/>
         <image name="Location_Icon" width="120" height="120"/>
+        <image name="Logo" width="150" height="45"/>
         <image name="Password_Icon" width="120" height="56"/>
         <image name="Person_White_Icon" width="22" height="30"/>
         <image name="Plus_Icon" width="30" height="30"/>
@@ -2588,7 +2578,7 @@ To access the pre-populated application, you will need to register as an applica
         <image name="Website_Icon" width="104" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iio-Lo-s7K"/>
+        <segue reference="fEc-4w-QdW"/>
         <segue reference="DnT-so-2eP"/>
     </inferredMetricsTieBreakers>
 </document>
