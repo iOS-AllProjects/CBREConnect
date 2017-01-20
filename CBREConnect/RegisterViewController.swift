@@ -23,31 +23,7 @@ class RegisterViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func imageTapped(_ sender: UITapGestureRecognizer) {
-        callActionSheet()
-    }
-    
-    func callActionSheet(){
-        let actionSheet = UIAlertController(title: "Add a Photo", message: "Upload from the following", preferredStyle: .actionSheet)
-        let libraryAction = UIAlertAction(title: "Photo Library", style: .default){ action in
-            self.fromSource(source: .photoLibrary)
-        }
-        let takePhotoAction = UIAlertAction(title: "Take Photo", style: .default){ action in
-            self.fromSource(source: .camera)
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
-        
-        actionSheet.addAction(libraryAction)
-        actionSheet.addAction(takePhotoAction)
-        actionSheet.addAction(cancelAction)
-        
-        if let popoverController = actionSheet.popoverPresentationController {
-            popoverController.barButtonItem = navigationItem.rightBarButtonItem
-        }
-        self.present(actionSheet, animated: true, completion: nil)
-    }
+
     
     //MARK: Keyboard Functions
     func registerToKeyboardNotifications() {
@@ -119,6 +95,34 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
             present(alert, animated: true, completion: nil)
         }
     }
+}
+
+extension RegisterViewController: UIGestureRecognizerDelegate{
+    @IBAction func uploadPhoto(_ sender: UITapGestureRecognizer) {
+        callActionSheet()
+    }
+    
+    func callActionSheet(){
+        let actionSheet = UIAlertController(title: "Add a Photo", message: "Upload from the following", preferredStyle: .actionSheet)
+        let libraryAction = UIAlertAction(title: "Photo Library", style: .default){ action in
+            self.fromSource(source: .photoLibrary)
+        }
+        let takePhotoAction = UIAlertAction(title: "Take Photo", style: .default){ action in
+            self.fromSource(source: .camera)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        
+        actionSheet.addAction(libraryAction)
+        actionSheet.addAction(takePhotoAction)
+        actionSheet.addAction(cancelAction)
+        
+        if let popoverController = actionSheet.popoverPresentationController {
+            popoverController.barButtonItem = navigationItem.rightBarButtonItem
+        }
+        self.present(actionSheet, animated: true, completion: nil)
+    }
+
 }
 
 extension RegisterViewController: UITextFieldDelegate{

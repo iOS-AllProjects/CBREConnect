@@ -57,7 +57,7 @@ class FilterViewController: UIViewController {
     }
     
     @IBAction func applyFiltersButtonTapped(_ sender: Any) {
-        
+         _ = navigationController?.popViewController(animated: true)
     }
     @IBAction func clearFilterDateLabelButtonTapped(_ sender: Any) {
         filterDateLabel.text = ""

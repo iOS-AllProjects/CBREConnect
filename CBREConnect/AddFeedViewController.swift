@@ -9,7 +9,11 @@
 import UIKit
 
 class AddFeedViewController: UIViewController {
-
+    // MARK: Properties
+    
+    var keyboardOnScreen = false
+    
+    // MARK: Outlets
     @IBOutlet weak var challengeButton: UIButton! {didSet {
         self.challengeButton.addBorder(side: .Bottom, color: UIColor.white, width: 2.0)}}
     @IBOutlet weak var eventButton: UIButton!
@@ -22,7 +26,7 @@ class AddFeedViewController: UIViewController {
  
     @IBOutlet weak var topicCollectionView: UICollectionView!
     @IBOutlet weak var categoryTextField: BorderFloatLabelTextField!
-    
+    //sample data
     let tags = ["Tech", "Design", "Humor", "Travel", "Music", "Writing", "Social Media", "Life", "Education", "Edtech", "Education Reform", "Photography", "Startup", "Poetry", "Women In Tech", "Female Founders", "Business", "Fiction", "Love", "Food", "Sports"]
     var sizingCell: TagCell? //will calculate cell width based on text length
     var interests = [Interest]()
@@ -35,12 +39,18 @@ class AddFeedViewController: UIViewController {
         let cellNib = UINib(nibName: "TagCell", bundle: nil)
         self.topicCollectionView.register(cellNib, forCellWithReuseIdentifier: "TagCell")
         self.sizingCell = (cellNib.instantiate(withOwner: nil, options: nil) as NSArray).firstObject as! TagCell?
-        
+        //populate
         for name in tags {
             let tag = Interest()
             tag.name = name
             self.interests.append(tag)
         }
+        
+        //notifications
+        subscribeToNotification(.UIKeyboardWillShow, selector: #selector(keyboardWillShow))
+        subscribeToNotification(.UIKeyboardWillHide, selector: #selector(keyboardWillHide))
+        subscribeToNotification(.UIKeyboardDidShow, selector: #selector(keyboardDidShow))
+        subscribeToNotification(.UIKeyboardDidHide, selector: #selector(keyboardDidHide))
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,7 +78,8 @@ class AddFeedViewController: UIViewController {
     }
     
     @IBAction func saveFeedButtonTapped(_ sender: Any) {
-        
+        print("feed added")
+        _ = navigationController?.popViewController(animated: true)
     }
 
     /*
@@ -80,37 +91,6 @@ class AddFeedViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    //MARK: Keyboard Functions
-    func registerToKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    func deregisterFromKeyboardNotifications() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    func keyboardWillShow(_ notification:NSNotification) {
-        adjustingHeight(show: true, notification: notification)
-    }
-    
-    func keyboardWillHide(_ notification:NSNotification) {
-        adjustingHeight(show: false, notification: notification)
-    }
-    
-    func adjustingHeight(show:Bool, notification:NSNotification) {
-        var userInfo = notification.userInfo!
-        let keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        let animationDurarion = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! TimeInterval
-        let changeInHeight = (keyboardFrame.height) * (show ? 1 : -1)
-        UIView.animate(withDuration: animationDurarion, animations: { () -> Void in
-            self.view.frame.origin.y -= changeInHeight
-        })
-    }
-
-
 }
 
 extension AddFeedViewController: UICollectionViewDataSource, UICollectionViewDelegate{
@@ -145,9 +125,6 @@ extension AddFeedViewController: UICollectionViewDataSource, UICollectionViewDel
 
 extension AddFeedViewController: UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == locationTextField || textField == categoryTextField{
-            registerToKeyboardNotifications()
-        }
         
         let datePickerView: UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.date
@@ -167,11 +144,43 @@ extension AddFeedViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        if textField == locationTextField || textField == categoryTextField{
-            deregisterFromKeyboardNotifications()
-        }
         return true
     }
+    
+    // MARK: Show/Hide Keyboard
+    
+    func keyboardWillShow(_ notification: Notification) {
+        if !keyboardOnScreen {
+            view.frame.origin.y -= keyboardHeight(notification)
+        }
+    }
+    
+    func keyboardWillHide(_ notification: Notification) {
+        if keyboardOnScreen {
+            view.frame.origin.y += keyboardHeight(notification)
+        }
+    }
+    
+    func keyboardDidShow(_ notification: Notification) {
+        keyboardOnScreen = true
+    }
+    
+    func keyboardDidHide(_ notification: Notification) {
+        keyboardOnScreen = false
+    }
+    
+    func keyboardHeight(_ notification: Notification) -> CGFloat {
+        let userInfo = (notification as NSNotification).userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
+        return keyboardSize.cgRectValue.height
+    }
+    
+    func resignIfFirstResponder(_ textField: UITextField) {
+        if textField.isFirstResponder {
+            textField.resignFirstResponder()
+        }
+    }
+
 }
 
 extension AddFeedViewController: UITextViewDelegate{
@@ -182,6 +191,17 @@ extension AddFeedViewController: UITextViewDelegate{
             return false
         }
         return true
+    }
+}
+
+private extension AddFeedViewController {
+    
+    func subscribeToNotification(_ notification: NSNotification.Name, selector: Selector) {
+        NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
+    }
+    
+    func unsubscribeFromAllNotifications() {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 

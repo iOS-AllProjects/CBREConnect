@@ -1959,20 +1959,21 @@ I am a Tech Consultant at CBRE and I am interessted in communicating with StartU
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="We6-qk-BzM" userLabel="Background">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="We6-qk-BzM" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Facade" translatesAutoresizingMaskIntoConstraints="NO" id="R0H-Ph-ENw" userLabel="Facade">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Facade" translatesAutoresizingMaskIntoConstraints="NO" id="R0H-Ph-ENw" userLabel="Facade">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="XUR-E1-iJw">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="16" y="28" width="343" height="631"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SoY-d9-qHE">
                                         <rect key="frame" x="141.5" y="0.0" width="60" height="78"/>
                                         <subviews>
                                             <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="CVu-qh-38i" customClass="RoundedImageView" customModule="CBREConnect" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="Dg3-oA-ExP"/>
                                                     <constraint firstAttribute="width" constant="60" id="cF3-4h-s1c"/>
@@ -1986,6 +1987,9 @@ I am a Tech Consultant at CBRE and I am interessted in communicating with StartU
                                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="w98-we-nw1" appends="YES" id="yFX-ku-J6m"/>
+                                                </connections>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD PHOTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W96-Qo-9Ip">
                                                 <rect key="frame" x="0.0" y="64" width="60" height="14"/>
@@ -2119,7 +2123,7 @@ I am a Tech Consultant at CBRE and I am interessted in communicating with StartU
                                         </connections>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBC-4H-mBk">
-                                        <rect key="frame" x="149" y="436" width="45" height="211"/>
+                                        <rect key="frame" x="149" y="436" width="45" height="195"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="NEXT"/>
@@ -2139,9 +2143,9 @@ I am a Tech Consultant at CBRE and I am interessted in communicating with StartU
                             <constraint firstItem="OUD-Zj-0eS" firstAttribute="top" secondItem="R0H-Ph-ENw" secondAttribute="bottom" id="8Ib-Cy-cVB"/>
                             <constraint firstItem="R0H-Ph-ENw" firstAttribute="top" secondItem="oqw-CC-oZY" secondAttribute="top" id="9dd-eM-WfJ"/>
                             <constraint firstAttribute="trailing" secondItem="R0H-Ph-ENw" secondAttribute="trailing" id="Euw-l0-fQP"/>
-                            <constraint firstItem="OUD-Zj-0eS" firstAttribute="top" secondItem="XUR-E1-iJw" secondAttribute="bottom" id="Rlg-PP-7DK"/>
+                            <constraint firstItem="OUD-Zj-0eS" firstAttribute="top" secondItem="XUR-E1-iJw" secondAttribute="bottom" constant="8" id="Rlg-PP-7DK"/>
                             <constraint firstItem="XUR-E1-iJw" firstAttribute="leading" secondItem="oqw-CC-oZY" secondAttribute="leadingMargin" id="SnM-kw-Y8S"/>
-                            <constraint firstItem="XUR-E1-iJw" firstAttribute="top" secondItem="L7P-O5-F4b" secondAttribute="bottom" id="dJE-72-i5y"/>
+                            <constraint firstItem="XUR-E1-iJw" firstAttribute="top" secondItem="L7P-O5-F4b" secondAttribute="bottom" constant="8" id="dJE-72-i5y"/>
                             <constraint firstItem="We6-qk-BzM" firstAttribute="top" secondItem="oqw-CC-oZY" secondAttribute="top" id="hpw-nY-0zR"/>
                             <constraint firstAttribute="trailing" secondItem="We6-qk-BzM" secondAttribute="trailing" id="xDp-im-mBb"/>
                         </constraints>
@@ -2154,6 +2158,11 @@ I am a Tech Consultant at CBRE and I am interessted in communicating with StartU
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whs-7l-zKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w98-we-nw1">
+                    <connections>
+                        <action selector="uploadPhoto:" destination="1Ry-mt-D1a" id="tWD-Mz-fSH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1247.2" y="983.65817091454278"/>
         </scene>
