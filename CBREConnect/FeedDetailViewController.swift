@@ -46,6 +46,9 @@ class FeedDetailViewController: UIViewController {
 
 
     @IBAction func viewProfileButtonTapped(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+       self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
     @IBAction func addToFavouritesButtonTapped(_ sender: Any) {

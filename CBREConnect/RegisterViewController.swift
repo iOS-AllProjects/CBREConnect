@@ -9,25 +9,23 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    //Mark: Outlets
 
     @IBOutlet weak var profilePicture: RoundedImageView!
     @IBOutlet weak var fullNameTextField: BorderFloatLabelTextField!
     @IBOutlet weak var websiteTextField: BorderFloatLabelTextField!
     @IBOutlet weak var aboutMeTextView: BorderTextView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(_:)))
-        profilePicture.addGestureRecognizer(tapGesture)
-    }
-
+    
+    // MARK: Life Cycle
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func imageTapped(_ sender: UITapGestureRecognizer) {
-            callActionSheet()
+        callActionSheet()
     }
     
     func callActionSheet(){
@@ -53,8 +51,8 @@ class RegisterViewController: UIViewController {
     
     //MARK: Keyboard Functions
     func registerToKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     func deregisterFromKeyboardNotifications() {
@@ -79,7 +77,7 @@ class RegisterViewController: UIViewController {
             self.view.frame.origin.y -= changeInHeight
         })
     }
-
+    
     
     /*
      // MARK: - Navigation
@@ -93,47 +91,45 @@ class RegisterViewController: UIViewController {
     
 }
 
-    // MARK: UImagePicker Delegate
+// MARK: UImagePicker Delegate
 extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-            if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-              self.profilePicture.image = image.scaleUIImageToSize(size: CGSize(width: 60, height: 60))
-            }
-            picker.dismiss(animated: true, completion: nil)
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.profilePicture.image = image.scaleUIImageToSize(size: CGSize(width: 60, height: 60))
         }
-        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            picker.dismiss(animated: true, completion: nil)
-        }
-        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
     func fromSource(source: UIImagePickerControllerSourceType) {
-            if UIImagePickerController.isSourceTypeAvailable(source) {
-                let picker = UIImagePickerController()
-                picker.sourceType = source
-                picker.delegate = self
-                picker.allowsEditing = false
-                present(picker, animated: true, completion: nil)
-            } else {
-                let alert = UIAlertController(title: "Error", message: "Not Available", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Okay", style: .default) { alertAction in
-                    alert.dismiss(animated: true, completion: nil)
-                })
-                present(alert, animated: true, completion: nil)
-            }
+        if UIImagePickerController.isSourceTypeAvailable(source) {
+            let picker = UIImagePickerController()
+            picker.sourceType = source
+            picker.delegate = self
+            picker.allowsEditing = false
+            present(picker, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Not Available", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .default) { alertAction in
+                alert.dismiss(animated: true, completion: nil)
+            })
+            present(alert, animated: true, completion: nil)
+        }
     }
 }
 
 extension RegisterViewController: UITextFieldDelegate{
-    private func textViewDidBeginEditing(_ textView: UITextView) {
-        aboutMeTextView.isEditable = false
-    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        enableTextView()
         return true
     }
-    
-    private func textViewDidEndEditing(_ textView: UITextView) {
-        aboutMeTextView.isEditable = true
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        disableTexView()
+        return true
     }
 }
 
@@ -143,13 +139,37 @@ extension RegisterViewController: UITextViewDelegate{
         {
             textView.resignFirstResponder()
             deregisterFromKeyboardNotifications()
+            enableTextFields()
             return false
         }
         return true
     }
     
+    
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        disableTextFields()
         registerToKeyboardNotifications()
         return true
     }
 }
+
+private extension RegisterViewController {
+    func enableTextFields(){
+        fullNameTextField.isEnabled = true
+        websiteTextField.isEnabled = true
+    }
+    
+    func disableTextFields(){
+        fullNameTextField.isEnabled = false
+        websiteTextField.isEnabled = false
+    }
+    
+    func enableTextView(){
+        aboutMeTextView.isEditable = true
+    }
+    
+    func disableTexView(){
+        aboutMeTextView.isEditable = false
+    }
+}
+

@@ -144,7 +144,9 @@ extension FeedViewController: UISearchBarDelegate, UISearchResultsUpdating {
         searchController.searchBar.placeholder = "Search here..."
         searchController.searchBar.barTintColor = greenHexColor.hexStringToUIColor()
         searchController.searchBar.showsCancelButton = true
-        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.setShowsCancelButton(true, animated: true)
+        searchController.searchBar.tintColor = greenHexColor.hexStringToUIColor()
+        searchController.loadViewIfNeeded()
         self.present(searchController, animated: true, completion: nil)
     }
 }
