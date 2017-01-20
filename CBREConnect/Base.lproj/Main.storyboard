@@ -848,326 +848,337 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G1e-5Z-dg8">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KM4-sm-Ext">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="OmB-lF-IWl" userLabel="TopBarStack">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="32"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G1e-5Z-dg8">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOb-y8-yxV">
-                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="32"/>
-                                                <color key="backgroundColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                <state key="normal" title="CHALLENGE">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="selectFeedTypeButtonsTapped:" destination="QKg-Nm-nLE" eventType="touchUpInside" id="6Uf-IL-uDt"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ds7-yF-Fo8">
-                                                <rect key="frame" x="136.5" y="0.0" width="102" height="32"/>
-                                                <color key="backgroundColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                <state key="normal" title="EVENT">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="selectFeedTypeButtonsTapped:" destination="QKg-Nm-nLE" eventType="touchUpInside" id="fxH-hx-bRI"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aO-5i-yul">
-                                                <rect key="frame" x="273.5" y="0.0" width="101.5" height="32"/>
-                                                <color key="backgroundColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                <state key="normal" title="STORY">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="selectFeedTypeButtonsTapped:" destination="QKg-Nm-nLE" eventType="touchUpInside" id="dRL-7l-dhh"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="aBX-Um-pPJ"/>
-                                        </constraints>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcu-Na-kbT" userLabel="ContainerView">
-                                        <rect key="frame" x="0.0" y="40" width="375" height="563"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmJ-AK-z6H" userLabel="SquareView">
-                                                <rect key="frame" x="8" y="8" width="359" height="547"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="OmB-lF-IWl" userLabel="TopBarStack">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="32"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="y0D-6D-WnL">
-                                                        <rect key="frame" x="8" y="8" width="343" height="539"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOb-y8-yxV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="32"/>
+                                                        <color key="backgroundColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                        <state key="normal" title="CHALLENGE">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectFeedTypeButtonsTapped:" destination="QKg-Nm-nLE" eventType="touchUpInside" id="6Uf-IL-uDt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ds7-yF-Fo8">
+                                                        <rect key="frame" x="136.5" y="0.0" width="102" height="32"/>
+                                                        <color key="backgroundColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                        <state key="normal" title="EVENT">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectFeedTypeButtonsTapped:" destination="QKg-Nm-nLE" eventType="touchUpInside" id="fxH-hx-bRI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aO-5i-yul">
+                                                        <rect key="frame" x="273.5" y="0.0" width="101.5" height="32"/>
+                                                        <color key="backgroundColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                        <state key="normal" title="STORY">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectFeedTypeButtonsTapped:" destination="QKg-Nm-nLE" eventType="touchUpInside" id="dRL-7l-dhh"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="aBX-Um-pPJ"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcu-Na-kbT" userLabel="ContainerView">
+                                                <rect key="frame" x="0.0" y="40" width="375" height="563"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmJ-AK-z6H" userLabel="SquareView">
+                                                        <rect key="frame" x="8" y="8" width="359" height="547"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EJT-w9-7Rl">
-                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="57"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="y0D-6D-WnL">
+                                                                <rect key="frame" x="8" y="8" width="343" height="539"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uf-hb-lJL">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="22"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                                        <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q73-uu-rHI" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22" width="343" height="35"/>
-                                                                        <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="343" id="4qj-db-c3v"/>
-                                                                        </constraints>
-                                                                        <nil key="textColor"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
-                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
-                                                                                <color key="value" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
-                                                                                <real key="value" value="5"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
-                                                                                <real key="value" value="2"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                        <connections>
-                                                                            <outlet property="delegate" destination="QKg-Nm-nLE" id="17Y-Jc-DKC"/>
-                                                                        </connections>
-                                                                    </textField>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EJT-w9-7Rl">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="57"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uf-hb-lJL">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="22"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                                                <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q73-uu-rHI" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="22" width="343" height="35"/>
+                                                                                <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="343" id="4qj-db-c3v"/>
+                                                                                </constraints>
+                                                                                <nil key="textColor"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
+                                                                                        <color key="value" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
+                                                                                        <real key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
+                                                                                        <real key="value" value="2"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <outlet property="delegate" destination="QKg-Nm-nLE" id="17Y-Jc-DKC"/>
+                                                                                </connections>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="qDd-FF-3ng">
+                                                                        <rect key="frame" x="0.0" y="66" width="343" height="122"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXV-UI-PNj">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="104" height="22"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                                                <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5F-9x-mx1" customClass="BorderTextView" customModule="CBREConnect" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="22" width="343" height="100"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="343" id="4RJ-TW-a36"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <outlet property="delegate" destination="QKg-Nm-nLE" id="5Ra-0J-3uD"/>
+                                                                                </connections>
+                                                                            </textView>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="MpG-7M-xsr">
+                                                                        <rect key="frame" x="0.0" y="197" width="343" height="56"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-BE-DOD">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="22"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                                                <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81R-Uq-gyz" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="22" width="343" height="34"/>
+                                                                                <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="343" id="Z3h-aS-weU"/>
+                                                                                </constraints>
+                                                                                <nil key="textColor"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
+                                                                                        <color key="value" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
+                                                                                        <real key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
+                                                                                        <real key="value" value="2"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <outlet property="delegate" destination="QKg-Nm-nLE" id="WLh-pJ-7gy"/>
+                                                                                </connections>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5up-GT-68c">
+                                                                        <rect key="frame" x="0.0" y="262" width="343" height="57"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwj-4h-xxC">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="82" height="22"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                                                <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkG-2t-v8e" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="22" width="343" height="35"/>
+                                                                                <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="343" id="MNE-KC-asW"/>
+                                                                                </constraints>
+                                                                                <nil key="textColor"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
+                                                                                        <color key="value" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
+                                                                                        <real key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
+                                                                                        <real key="value" value="2"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <outlet property="delegate" destination="QKg-Nm-nLE" id="hJT-Of-jlH"/>
+                                                                                </connections>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0go-Ve-SDy">
+                                                                        <rect key="frame" x="0.0" y="328" width="343" height="56"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af8-zy-dXV">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="22"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                                                <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T30-ES-50L" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="22" width="343" height="34"/>
+                                                                                <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="343" id="UGe-GF-onP"/>
+                                                                                </constraints>
+                                                                                <nil key="textColor"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
+                                                                                        <color key="value" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
+                                                                                        <real key="value" value="5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
+                                                                                        <real key="value" value="2"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <outlet property="delegate" destination="QKg-Nm-nLE" id="DtF-8h-Wwv"/>
+                                                                                </connections>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0xs-1l-OzG">
+                                                                        <rect key="frame" x="0.0" y="393" width="343" height="146"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOPIC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZt-SX-ptu">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="47.5" height="22"/>
+                                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                                                <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fis-Ya-03o">
+                                                                                <rect key="frame" x="0.0" y="22" width="343" height="124"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="343" id="wQz-HY-nv8"/>
+                                                                                </constraints>
+                                                                                <collectionViewLayout key="collectionViewLayout" id="FES-zO-XFa" customClass="TagFlowLayout" customModule="CBREConnect" customModuleProvider="target"/>
+                                                                                <cells>
+                                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCell" id="gEr-0z-ZP2" customClass="TagCell" customModule="CBREConnect" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                                        </view>
+                                                                                    </collectionViewCell>
+                                                                                </cells>
+                                                                                <connections>
+                                                                                    <outlet property="dataSource" destination="QKg-Nm-nLE" id="pAC-ez-qBu"/>
+                                                                                    <outlet property="delegate" destination="QKg-Nm-nLE" id="j6F-nf-4Y2"/>
+                                                                                </connections>
+                                                                            </collectionView>
+                                                                        </subviews>
+                                                                    </stackView>
                                                                 </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="qDd-FF-3ng">
-                                                                <rect key="frame" x="0.0" y="66" width="343" height="122"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXV-UI-PNj">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="22"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                                        <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5F-9x-mx1" customClass="BorderTextView" customModule="CBREConnect" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22" width="343" height="100"/>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="343" id="4RJ-TW-a36"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                <real key="value" value="1"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                <real key="value" value="5"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                <color key="value" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                        <connections>
-                                                                            <outlet property="delegate" destination="QKg-Nm-nLE" id="5Ra-0J-3uD"/>
-                                                                        </connections>
-                                                                    </textView>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="MpG-7M-xsr">
-                                                                <rect key="frame" x="0.0" y="197" width="343" height="56"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-BE-DOD">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="22"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                                        <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81R-Uq-gyz" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22" width="343" height="34"/>
-                                                                        <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="343" id="Z3h-aS-weU"/>
-                                                                        </constraints>
-                                                                        <nil key="textColor"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
-                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
-                                                                                <color key="value" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
-                                                                                <real key="value" value="5"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
-                                                                                <real key="value" value="2"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                        <connections>
-                                                                            <outlet property="delegate" destination="QKg-Nm-nLE" id="WLh-pJ-7gy"/>
-                                                                        </connections>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5up-GT-68c">
-                                                                <rect key="frame" x="0.0" y="262" width="343" height="57"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwj-4h-xxC">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="82" height="22"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                                        <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkG-2t-v8e" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22" width="343" height="35"/>
-                                                                        <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="343" id="MNE-KC-asW"/>
-                                                                        </constraints>
-                                                                        <nil key="textColor"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
-                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
-                                                                                <color key="value" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
-                                                                                <real key="value" value="5"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
-                                                                                <real key="value" value="2"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                        <connections>
-                                                                            <outlet property="delegate" destination="QKg-Nm-nLE" id="hJT-Of-jlH"/>
-                                                                        </connections>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0go-Ve-SDy">
-                                                                <rect key="frame" x="0.0" y="328" width="343" height="56"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af8-zy-dXV">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="84.5" height="22"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                                        <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T30-ES-50L" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22" width="343" height="34"/>
-                                                                        <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="343" id="UGe-GF-onP"/>
-                                                                        </constraints>
-                                                                        <nil key="textColor"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
-                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
-                                                                                <color key="value" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
-                                                                                <real key="value" value="5"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
-                                                                                <real key="value" value="2"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                        <connections>
-                                                                            <outlet property="delegate" destination="QKg-Nm-nLE" id="DtF-8h-Wwv"/>
-                                                                        </connections>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0xs-1l-OzG">
-                                                                <rect key="frame" x="0.0" y="393" width="343" height="146"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOPIC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZt-SX-ptu">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="47.5" height="22"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                                        <color key="textColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fis-Ya-03o">
-                                                                        <rect key="frame" x="0.0" y="22" width="343" height="124"/>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="343" id="wQz-HY-nv8"/>
-                                                                        </constraints>
-                                                                        <collectionViewLayout key="collectionViewLayout" id="FES-zO-XFa" customClass="TagFlowLayout" customModule="CBREConnect" customModuleProvider="target"/>
-                                                                        <cells>
-                                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCell" id="gEr-0z-ZP2" customClass="TagCell" customModule="CBREConnect" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                                </view>
-                                                                            </collectionViewCell>
-                                                                        </cells>
-                                                                        <connections>
-                                                                            <outlet property="dataSource" destination="QKg-Nm-nLE" id="pAC-ez-qBu"/>
-                                                                            <outlet property="delegate" destination="QKg-Nm-nLE" id="j6F-nf-4Y2"/>
-                                                                        </connections>
-                                                                    </collectionView>
-                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="0go-Ve-SDy" firstAttribute="top" secondItem="y0D-6D-WnL" secondAttribute="top" constant="328" id="0jk-3e-EzX"/>
+                                                                    <constraint firstItem="MpG-7M-xsr" firstAttribute="top" secondItem="qDd-FF-3ng" secondAttribute="bottom" constant="9" id="do5-hc-4rP"/>
+                                                                    <constraint firstItem="qDd-FF-3ng" firstAttribute="top" secondItem="y0D-6D-WnL" secondAttribute="top" constant="66" id="vZw-rt-F5S"/>
+                                                                    <constraint firstItem="5up-GT-68c" firstAttribute="top" secondItem="y0D-6D-WnL" secondAttribute="top" constant="262" id="vpP-Z2-RbG"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstItem="0go-Ve-SDy" firstAttribute="top" secondItem="y0D-6D-WnL" secondAttribute="top" constant="328" id="0jk-3e-EzX"/>
-                                                            <constraint firstItem="MpG-7M-xsr" firstAttribute="top" secondItem="qDd-FF-3ng" secondAttribute="bottom" constant="9" id="do5-hc-4rP"/>
-                                                            <constraint firstItem="qDd-FF-3ng" firstAttribute="top" secondItem="y0D-6D-WnL" secondAttribute="top" constant="66" id="vZw-rt-F5S"/>
-                                                            <constraint firstItem="5up-GT-68c" firstAttribute="top" secondItem="y0D-6D-WnL" secondAttribute="top" constant="262" id="vpP-Z2-RbG"/>
+                                                            <constraint firstAttribute="trailing" secondItem="y0D-6D-WnL" secondAttribute="trailing" constant="8" id="BIK-Ze-Z6N"/>
+                                                            <constraint firstAttribute="bottom" secondItem="y0D-6D-WnL" secondAttribute="bottom" id="PAU-i4-M3V"/>
+                                                            <constraint firstItem="y0D-6D-WnL" firstAttribute="leading" secondItem="MmJ-AK-z6H" secondAttribute="leading" constant="8" id="Y82-iQ-gRb"/>
+                                                            <constraint firstItem="y0D-6D-WnL" firstAttribute="top" secondItem="MmJ-AK-z6H" secondAttribute="top" constant="8" id="c5c-QF-OEk"/>
                                                         </constraints>
-                                                    </stackView>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                                <size key="value" width="0.0" height="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                                <integer key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                                <real key="value" value="0.59999999999999998"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="y0D-6D-WnL" secondAttribute="trailing" constant="8" id="BIK-Ze-Z6N"/>
-                                                    <constraint firstAttribute="bottom" secondItem="y0D-6D-WnL" secondAttribute="bottom" id="PAU-i4-M3V"/>
-                                                    <constraint firstItem="y0D-6D-WnL" firstAttribute="leading" secondItem="MmJ-AK-z6H" secondAttribute="leading" constant="8" id="Y82-iQ-gRb"/>
-                                                    <constraint firstItem="y0D-6D-WnL" firstAttribute="top" secondItem="MmJ-AK-z6H" secondAttribute="top" constant="8" id="c5c-QF-OEk"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MmJ-AK-z6H" secondAttribute="bottom" constant="8" id="85Y-WH-QOX"/>
+                                                    <constraint firstAttribute="height" constant="563" id="Kcq-4C-xOP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MmJ-AK-z6H" secondAttribute="trailing" constant="8" id="hua-fE-pKf"/>
+                                                    <constraint firstItem="MmJ-AK-z6H" firstAttribute="top" secondItem="dcu-Na-kbT" secondAttribute="top" constant="8" id="w81-Jy-j7r"/>
+                                                    <constraint firstItem="MmJ-AK-z6H" firstAttribute="leading" secondItem="dcu-Na-kbT" secondAttribute="leading" constant="8" id="zKU-5G-hXp"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="0.0" height="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="4"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                        <real key="value" value="0.59999999999999998"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="MmJ-AK-z6H" secondAttribute="bottom" constant="8" id="85Y-WH-QOX"/>
-                                            <constraint firstAttribute="height" constant="563" id="Kcq-4C-xOP"/>
-                                            <constraint firstAttribute="trailing" secondItem="MmJ-AK-z6H" secondAttribute="trailing" constant="8" id="hua-fE-pKf"/>
-                                            <constraint firstItem="MmJ-AK-z6H" firstAttribute="top" secondItem="dcu-Na-kbT" secondAttribute="top" constant="8" id="w81-Jy-j7r"/>
-                                            <constraint firstItem="MmJ-AK-z6H" firstAttribute="leading" secondItem="dcu-Na-kbT" secondAttribute="leading" constant="8" id="zKU-5G-hXp"/>
-                                        </constraints>
-                                    </view>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="G1e-5Z-dg8" firstAttribute="leading" secondItem="KM4-sm-Ext" secondAttribute="leading" id="0SD-nm-bcf"/>
+                                    <constraint firstAttribute="bottom" secondItem="G1e-5Z-dg8" secondAttribute="bottom" id="TQ5-2S-m74"/>
+                                    <constraint firstAttribute="trailing" secondItem="G1e-5Z-dg8" secondAttribute="trailing" id="Wcn-Ld-q8c"/>
+                                    <constraint firstItem="G1e-5Z-dg8" firstAttribute="top" secondItem="KM4-sm-Ext" secondAttribute="top" id="to0-0p-M5h"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="mf5-7G-zWd" firstAttribute="top" secondItem="G1e-5Z-dg8" secondAttribute="bottom" id="6LN-k2-mT6"/>
-                            <constraint firstItem="G1e-5Z-dg8" firstAttribute="leading" secondItem="AIH-Kj-W2E" secondAttribute="leading" id="QqS-j5-Tbo"/>
-                            <constraint firstItem="G1e-5Z-dg8" firstAttribute="top" secondItem="0lX-nT-ttn" secondAttribute="bottom" id="V7p-cy-N9H"/>
-                            <constraint firstAttribute="trailing" secondItem="G1e-5Z-dg8" secondAttribute="trailing" id="haV-tq-x7G"/>
+                            <constraint firstAttribute="trailing" secondItem="KM4-sm-Ext" secondAttribute="trailing" id="2AQ-h7-ISS"/>
+                            <constraint firstItem="mf5-7G-zWd" firstAttribute="top" secondItem="KM4-sm-Ext" secondAttribute="bottom" id="DvO-5g-QDb"/>
+                            <constraint firstItem="KM4-sm-Ext" firstAttribute="leading" secondItem="AIH-Kj-W2E" secondAttribute="leading" id="Q4P-fm-cTj"/>
+                            <constraint firstItem="KM4-sm-Ext" firstAttribute="top" secondItem="0lX-nT-ttn" secondAttribute="bottom" id="gRu-8k-dcM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New" id="oT3-uu-72A">
@@ -1184,6 +1195,7 @@
                         <outlet property="descriptionTextView" destination="f5F-9x-mx1" id="rpD-Fy-WAV"/>
                         <outlet property="eventButton" destination="Ds7-yF-Fo8" id="I3s-gI-qtX"/>
                         <outlet property="locationTextField" destination="HkG-2t-v8e" id="Fcb-5y-LSA"/>
+                        <outlet property="stackViewBottomConstraint" destination="DvO-5g-QDb" id="k2a-7b-LgS"/>
                         <outlet property="storyButton" destination="5aO-5i-yul" id="4Tg-Iy-oAu"/>
                         <outlet property="titleTextField" destination="q73-uu-rHI" id="T3c-V8-Jd5"/>
                         <outlet property="topicCollectionView" destination="fis-Ya-03o" id="c7j-Ba-lQt"/>
@@ -1959,201 +1971,214 @@ I am a Tech Consultant at CBRE and I am interessted in communicating with StartU
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="We6-qk-BzM" userLabel="Background">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="We6-qk-BzM" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Facade" translatesAutoresizingMaskIntoConstraints="NO" id="R0H-Ph-ENw" userLabel="Facade">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Facade" translatesAutoresizingMaskIntoConstraints="NO" id="R0H-Ph-ENw" userLabel="Facade">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="XUR-E1-iJw">
-                                <rect key="frame" x="16" y="28" width="343" height="631"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcW-pE-0Gg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SoY-d9-qHE">
-                                        <rect key="frame" x="141.5" y="0.0" width="60" height="78"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="XUR-E1-iJw">
+                                        <rect key="frame" x="16" y="16" width="343" height="604"/>
                                         <subviews>
-                                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="CVu-qh-38i" customClass="RoundedImageView" customModule="CBREConnect" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                <gestureRecognizers/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SoY-d9-qHE">
+                                                <rect key="frame" x="141.5" y="0.0" width="60" height="78"/>
+                                                <subviews>
+                                                    <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="CVu-qh-38i" customClass="RoundedImageView" customModule="CBREConnect" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="Dg3-oA-ExP"/>
+                                                            <constraint firstAttribute="width" constant="60" id="cF3-4h-s1c"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="perfectRound" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="w98-we-nw1" appends="YES" id="yFX-ku-J6m"/>
+                                                        </connections>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD PHOTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W96-Qo-9Ip">
+                                                        <rect key="frame" x="0.0" y="64" width="60" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dId-SL-5et">
+                                                <rect key="frame" x="1" y="178" width="341" height="70"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jrR-pG-Xqa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="341" height="30"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Id_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="QkQ-fB-Cmq">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="oEC-bI-y4c"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="yWh-sk-kT1"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FULL NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lMy-YZ-wfr" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
+                                                                <rect key="frame" x="36" y="0.0" width="305" height="30"/>
+                                                                <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="305" id="fJj-cr-9H0"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomBorderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
+                                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="activeTextColorfloatingLabel">
+                                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveTextColorfloatingLabel">
+                                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
+                                                                        <real key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
+                                                                        <real key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="1Ry-mt-D1a" id="zGy-ID-B7w"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="3Vo-yH-QCy">
+                                                        <rect key="frame" x="0.0" y="40" width="341" height="30"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Website_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="sHL-g3-Xzb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="c5t-wh-OcY"/>
+                                                                    <constraint firstAttribute="width" constant="30" id="hsj-iH-3ox"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="WEBSITE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Wp-2t-PdF" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
+                                                                <rect key="frame" x="36" y="0.0" width="305" height="30"/>
+                                                                <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="305" id="akR-p4-YnE"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomBorderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
+                                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="activeTextColorfloatingLabel">
+                                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveTextColorfloatingLabel">
+                                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
+                                                                        <real key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
+                                                                        <real key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="1Ry-mt-D1a" id="Ftc-6J-J03"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="ABOUT ME" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7bJ-Zu-hQd" customClass="BorderTextView" customModule="CBREConnect" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="348" width="343" height="120"/>
+                                                <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="Dg3-oA-ExP"/>
-                                                    <constraint firstAttribute="width" constant="60" id="cF3-4h-s1c"/>
+                                                    <constraint firstAttribute="width" constant="343" id="Dnm-42-Vov"/>
+                                                    <constraint firstAttribute="height" constant="120" id="GMt-Po-CkR"/>
                                                 </constraints>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="perfectRound" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="w98-we-nw1" appends="YES" id="yFX-ku-J6m"/>
+                                                    <outlet property="delegate" destination="1Ry-mt-D1a" id="mdz-Oc-wkC"/>
                                                 </connections>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD PHOTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W96-Qo-9Ip">
-                                                <rect key="frame" x="0.0" y="64" width="60" height="14"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBC-4H-mBk">
+                                                <rect key="frame" x="149" y="568" width="45" height="36"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="NEXT"/>
+                                                <connections>
+                                                    <segue destination="Gb3-7m-tHe" kind="show" id="1ZO-lF-2WO"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dId-SL-5et">
-                                        <rect key="frame" x="1" y="138" width="341" height="70"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jrR-pG-Xqa">
-                                                <rect key="frame" x="0.0" y="0.0" width="341" height="30"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Id_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="QkQ-fB-Cmq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="30" id="oEC-bI-y4c"/>
-                                                            <constraint firstAttribute="height" constant="30" id="yWh-sk-kT1"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FULL NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lMy-YZ-wfr" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
-                                                        <rect key="frame" x="36" y="0.0" width="305" height="30"/>
-                                                        <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="305" id="fJj-cr-9H0"/>
-                                                        </constraints>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomBorderWidth">
-                                                                <real key="value" value="1"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
-                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="activeTextColorfloatingLabel">
-                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveTextColorfloatingLabel">
-                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
-                                                                <real key="value" value="4"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
-                                                                <real key="value" value="6"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="1Ry-mt-D1a" id="zGy-ID-B7w"/>
-                                                        </connections>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="3Vo-yH-QCy">
-                                                <rect key="frame" x="0.0" y="40" width="341" height="30"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Website_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="sHL-g3-Xzb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="c5t-wh-OcY"/>
-                                                            <constraint firstAttribute="width" constant="30" id="hsj-iH-3ox"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="WEBSITE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Wp-2t-PdF" customClass="BorderFloatLabelTextField" customModule="CBREConnect" customModuleProvider="target">
-                                                        <rect key="frame" x="36" y="0.0" width="305" height="30"/>
-                                                        <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="305" id="akR-p4-YnE"/>
-                                                        </constraints>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="requiredField" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorderEnabled" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomBorderWidth">
-                                                                <real key="value" value="1"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
-                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="activeTextColorfloatingLabel">
-                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveTextColorfloatingLabel">
-                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
-                                                                <real key="value" value="4"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
-                                                                <real key="value" value="6"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="1Ry-mt-D1a" id="Ftc-6J-J03"/>
-                                                        </connections>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ABOUT ME" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7bJ-Zu-hQd" customClass="BorderTextView" customModule="CBREConnect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="268" width="343" height="108"/>
-                                        <color key="tintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="Dnm-42-Vov"/>
-                                        </constraints>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outlet property="delegate" destination="1Ry-mt-D1a" id="mdz-Oc-wkC"/>
-                                        </connections>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBC-4H-mBk">
-                                        <rect key="frame" x="149" y="436" width="45" height="195"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="NEXT"/>
-                                        <connections>
-                                            <segue destination="Gb3-7m-tHe" kind="show" id="1ZO-lF-2WO"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="XUR-E1-iJw" secondAttribute="bottom" constant="16" id="Jfo-vk-7hd"/>
+                                    <constraint firstAttribute="trailing" secondItem="XUR-E1-iJw" secondAttribute="trailing" constant="16" id="fbm-pD-4Mg"/>
+                                    <constraint firstItem="XUR-E1-iJw" firstAttribute="top" secondItem="WcW-pE-0Gg" secondAttribute="top" constant="16" id="nX1-ck-Apx"/>
+                                    <constraint firstItem="XUR-E1-iJw" firstAttribute="leading" secondItem="WcW-pE-0Gg" secondAttribute="leading" constant="16" id="w82-WF-lWF"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OUD-Zj-0eS" firstAttribute="top" secondItem="We6-qk-BzM" secondAttribute="bottom" id="093-F9-dxu"/>
-                            <constraint firstItem="XUR-E1-iJw" firstAttribute="trailing" secondItem="oqw-CC-oZY" secondAttribute="trailingMargin" id="2NU-L6-cnp"/>
-                            <constraint firstItem="R0H-Ph-ENw" firstAttribute="leading" secondItem="oqw-CC-oZY" secondAttribute="leading" id="55K-R1-btg"/>
-                            <constraint firstItem="We6-qk-BzM" firstAttribute="leading" secondItem="oqw-CC-oZY" secondAttribute="leading" id="70C-gH-spm"/>
-                            <constraint firstItem="OUD-Zj-0eS" firstAttribute="top" secondItem="R0H-Ph-ENw" secondAttribute="bottom" id="8Ib-Cy-cVB"/>
-                            <constraint firstItem="R0H-Ph-ENw" firstAttribute="top" secondItem="oqw-CC-oZY" secondAttribute="top" id="9dd-eM-WfJ"/>
-                            <constraint firstAttribute="trailing" secondItem="R0H-Ph-ENw" secondAttribute="trailing" id="Euw-l0-fQP"/>
-                            <constraint firstItem="OUD-Zj-0eS" firstAttribute="top" secondItem="XUR-E1-iJw" secondAttribute="bottom" constant="8" id="Rlg-PP-7DK"/>
-                            <constraint firstItem="XUR-E1-iJw" firstAttribute="leading" secondItem="oqw-CC-oZY" secondAttribute="leadingMargin" id="SnM-kw-Y8S"/>
-                            <constraint firstItem="XUR-E1-iJw" firstAttribute="top" secondItem="L7P-O5-F4b" secondAttribute="bottom" constant="8" id="dJE-72-i5y"/>
-                            <constraint firstItem="We6-qk-BzM" firstAttribute="top" secondItem="oqw-CC-oZY" secondAttribute="top" id="hpw-nY-0zR"/>
-                            <constraint firstAttribute="trailing" secondItem="We6-qk-BzM" secondAttribute="trailing" id="xDp-im-mBb"/>
+                            <constraint firstItem="OUD-Zj-0eS" firstAttribute="top" secondItem="WcW-pE-0Gg" secondAttribute="bottom" id="9IM-Me-pHW"/>
+                            <constraint firstAttribute="trailing" secondItem="WcW-pE-0Gg" secondAttribute="trailing" id="BmQ-WS-7lH"/>
+                            <constraint firstItem="OUD-Zj-0eS" firstAttribute="top" secondItem="We6-qk-BzM" secondAttribute="bottom" id="Xjk-gm-biN"/>
+                            <constraint firstItem="WcW-pE-0Gg" firstAttribute="leading" secondItem="oqw-CC-oZY" secondAttribute="leading" id="bwh-zl-POx"/>
+                            <constraint firstItem="WcW-pE-0Gg" firstAttribute="top" secondItem="oqw-CC-oZY" secondAttribute="top" id="gOJ-j0-BwO"/>
+                            <constraint firstItem="We6-qk-BzM" firstAttribute="leading" secondItem="oqw-CC-oZY" secondAttribute="leading" id="guJ-TP-u0k"/>
+                            <constraint firstAttribute="trailing" secondItem="R0H-Ph-ENw" secondAttribute="trailing" id="i9P-JG-6yn"/>
+                            <constraint firstItem="R0H-Ph-ENw" firstAttribute="top" secondItem="oqw-CC-oZY" secondAttribute="top" id="jZR-q6-p19"/>
+                            <constraint firstItem="OUD-Zj-0eS" firstAttribute="top" secondItem="R0H-Ph-ENw" secondAttribute="bottom" id="kNI-Eu-G8c"/>
+                            <constraint firstItem="We6-qk-BzM" firstAttribute="top" secondItem="oqw-CC-oZY" secondAttribute="top" id="mVl-RC-Izf"/>
+                            <constraint firstItem="R0H-Ph-ENw" firstAttribute="leading" secondItem="oqw-CC-oZY" secondAttribute="leading" id="p8h-eB-NaA"/>
+                            <constraint firstAttribute="trailing" secondItem="We6-qk-BzM" secondAttribute="trailing" id="sQ5-hb-ZwW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="aboutMeTextView" destination="7bJ-Zu-hQd" id="mik-lk-h6x"/>
                         <outlet property="fullNameTextField" destination="lMy-YZ-wfr" id="bgm-pK-OIt"/>
                         <outlet property="profilePicture" destination="CVu-qh-38i" id="JmS-p3-zQq"/>
+                        <outlet property="scrollViewBottomConstraint" destination="9IM-Me-pHW" id="Iza-Q6-0ns"/>
                         <outlet property="websiteTextField" destination="7Wp-2t-PdF" id="vf8-ob-Qnc"/>
                     </connections>
                 </viewController>

@@ -16,6 +16,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var fullNameTextField: BorderFloatLabelTextField!
     @IBOutlet weak var websiteTextField: BorderFloatLabelTextField!
     @IBOutlet weak var aboutMeTextView: BorderTextView!
+    @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
     
     // MARK: Life Cycle
     
@@ -23,37 +24,14 @@ class RegisterViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
-    //MARK: Keyboard Functions
-    func registerToKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    override func viewWillAppear(_ animated: Bool) {
+        addKeyboardObservers()
     }
     
-    func deregisterFromKeyboardNotifications() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    override func viewDidDisappear(_ animated: Bool) {
+        removeKeyboardObservers()
     }
-    
-    func keyboardWillShow(_ notification:NSNotification) {
-        adjustingHeight(show: true, notification: notification)
-    }
-    
-    func keyboardWillHide(_ notification:NSNotification) {
-        adjustingHeight(show: false, notification: notification)
-    }
-    
-    func adjustingHeight(show:Bool, notification:NSNotification) {
-        var userInfo = notification.userInfo!
-        let keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        let animationDurarion = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! TimeInterval
-        let changeInHeight = (keyboardFrame.height) * (show ? 1 : -1)
-        UIView.animate(withDuration: animationDurarion, animations: { () -> Void in
-            self.view.frame.origin.y -= changeInHeight
-        })
-    }
-    
     
     /*
      // MARK: - Navigation
@@ -125,14 +103,16 @@ extension RegisterViewController: UIGestureRecognizerDelegate{
 
 }
 
+extension RegisterViewController: ManageKeyboard{
+    var layoutConstraintsToAdjust: [NSLayoutConstraint] {
+        return [scrollViewBottomConstraint]
+    }
+    
+}
+
 extension RegisterViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        enableTextView()
-        return true
-    }
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        disableTexView()
         return true
     }
 }
@@ -142,38 +122,10 @@ extension RegisterViewController: UITextViewDelegate{
         if text == "\n"  // Recognizes enter key in keyboard
         {
             textView.resignFirstResponder()
-            deregisterFromKeyboardNotifications()
-            enableTextFields()
+
             return false
         }
         return true
-    }
-    
-    
-    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        disableTextFields()
-        registerToKeyboardNotifications()
-        return true
-    }
-}
-
-private extension RegisterViewController {
-    func enableTextFields(){
-        fullNameTextField.isEnabled = true
-        websiteTextField.isEnabled = true
-    }
-    
-    func disableTextFields(){
-        fullNameTextField.isEnabled = false
-        websiteTextField.isEnabled = false
-    }
-    
-    func enableTextView(){
-        aboutMeTextView.isEditable = true
-    }
-    
-    func disableTexView(){
-        aboutMeTextView.isEditable = false
     }
 }
 

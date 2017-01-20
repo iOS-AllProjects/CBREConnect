@@ -9,11 +9,9 @@
 import UIKit
 
 class AddFeedViewController: UIViewController {
-    // MARK: Properties
-    
-    var keyboardOnScreen = false
     
     // MARK: Outlets
+    @IBOutlet weak var stackViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var challengeButton: UIButton! {didSet {
         self.challengeButton.addBorder(side: .Bottom, color: UIColor.white, width: 2.0)}}
     @IBOutlet weak var eventButton: UIButton!
@@ -45,12 +43,14 @@ class AddFeedViewController: UIViewController {
             tag.name = name
             self.interests.append(tag)
         }
-        
-        //notifications
-        subscribeToNotification(.UIKeyboardWillShow, selector: #selector(keyboardWillShow))
-        subscribeToNotification(.UIKeyboardWillHide, selector: #selector(keyboardWillHide))
-        subscribeToNotification(.UIKeyboardDidShow, selector: #selector(keyboardDidShow))
-        subscribeToNotification(.UIKeyboardDidHide, selector: #selector(keyboardDidHide))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        addKeyboardObservers()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        removeKeyboardObservers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,6 +91,13 @@ class AddFeedViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
+
+extension AddFeedViewController: ManageKeyboard{
+    var layoutConstraintsToAdjust: [NSLayoutConstraint] {
+                   return [stackViewBottomConstraint]
+             }
+    
 }
 
 extension AddFeedViewController: UICollectionViewDataSource, UICollectionViewDelegate{
@@ -146,40 +153,6 @@ extension AddFeedViewController: UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
-    
-    // MARK: Show/Hide Keyboard
-    
-    func keyboardWillShow(_ notification: Notification) {
-        if !keyboardOnScreen {
-            view.frame.origin.y -= keyboardHeight(notification)
-        }
-    }
-    
-    func keyboardWillHide(_ notification: Notification) {
-        if keyboardOnScreen {
-            view.frame.origin.y += keyboardHeight(notification)
-        }
-    }
-    
-    func keyboardDidShow(_ notification: Notification) {
-        keyboardOnScreen = true
-    }
-    
-    func keyboardDidHide(_ notification: Notification) {
-        keyboardOnScreen = false
-    }
-    
-    func keyboardHeight(_ notification: Notification) -> CGFloat {
-        let userInfo = (notification as NSNotification).userInfo
-        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
-        return keyboardSize.cgRectValue.height
-    }
-    
-    func resignIfFirstResponder(_ textField: UITextField) {
-        if textField.isFirstResponder {
-            textField.resignFirstResponder()
-        }
-    }
 
 }
 
@@ -191,17 +164,6 @@ extension AddFeedViewController: UITextViewDelegate{
             return false
         }
         return true
-    }
-}
-
-private extension AddFeedViewController {
-    
-    func subscribeToNotification(_ notification: NSNotification.Name, selector: Selector) {
-        NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
-    }
-    
-    func unsubscribeFromAllNotifications() {
-        NotificationCenter.default.removeObserver(self)
     }
 }
 

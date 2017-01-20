@@ -35,6 +35,7 @@
 		B62AD1241E08284F00CFD9D2 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62AD1231E08284F00CFD9D2 /* Feed.swift */; };
 		B62AD1261E086A7000CFD9D2 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62AD1251E086A7000CFD9D2 /* FeedDetailViewController.swift */; };
 		B62AD1281E08727B00CFD9D2 /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62AD1271E08727B00CFD9D2 /* NSDateExtensions.swift */; };
+		B64C25061E32931100B9EF84 /* ManageKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25051E32931100B9EF84 /* ManageKeyboard.swift */; };
 		B6885D761E0492DE003343CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6885D751E0492DE003343CE /* LoginViewController.swift */; };
 		B6EAC99F1E098D8700EAC209 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EAC99E1E098D8700EAC209 /* FilterViewController.swift */; };
 		B6EAC9A11E098D9600EAC209 /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EAC9A01E098D9600EAC209 /* AddFeedViewController.swift */; };
@@ -99,6 +100,7 @@
 		B62AD1231E08284F00CFD9D2 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		B62AD1251E086A7000CFD9D2 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 		B62AD1271E08727B00CFD9D2 /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
+		B64C25051E32931100B9EF84 /* ManageKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManageKeyboard.swift; path = CBREConnect/ManageKeyboard.swift; sourceTree = "<group>"; };
 		B6885D751E0492DE003343CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B6EAC99E1E098D8700EAC209 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		B6EAC9A01E098D9600EAC209 /* AddFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				B62AD1151E0704DB00CFD9D2 /* Model */,
 				B60E30D11E0489A70081D819 /* UI */,
 				B60E30CE1E0489560081D819 /* Supporting Files */,
+				B64C25071E32931600B9EF84 /* Protocols */,
 				B60E30CD1E04791F0081D819 /* Extensions */,
 			);
 			path = CBREConnect;
@@ -310,6 +313,15 @@
 				B62AD1201E0826B700CFD9D2 /* FeedCell.swift */,
 			);
 			name = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		B64C25071E32931600B9EF84 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B64C25051E32931100B9EF84 /* ManageKeyboard.swift */,
+			);
+			name = Protocols;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +493,7 @@
 				B6885D761E0492DE003343CE /* LoginViewController.swift in Sources */,
 				B62AD1121E06F4F200CFD9D2 /* TagFlowLayout.swift in Sources */,
 				B60E30D01E0489A10081D819 /* BorderFloatLabelTextField.swift in Sources */,
+				B64C25061E32931100B9EF84 /* ManageKeyboard.swift in Sources */,
 				B62AD1031E05F2F300CFD9D2 /* RoundedImage.swift in Sources */,
 				B62AD0F61E05A36600CFD9D2 /* UIButtonExtensions.swift in Sources */,
 			);
