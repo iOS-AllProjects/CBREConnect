@@ -15,9 +15,15 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileWebsiteLabel: UILabel!
     @IBOutlet weak var profileAboutTextView: UITextView!
     @IBOutlet weak var profileFollowButton: UIButton!
-    @IBOutlet weak var profileTagsCollectionView: UICollectionView!
+    @IBOutlet weak var editProfile: UIBarButtonItem!
     
-    let tags = ["Tech", "Design", "Humor", "Travel", "Music", "Writing", "Social Media", "Life", "Education", "Edtech", "Education Reform", "Photography", "Startup", "Poetry", "Women In Tech", "Female Founders", "Business", "Fiction", "Love", "Food", "Sports"]
+    @IBOutlet weak var editInterests: UIButton!
+    @IBOutlet weak var editDescription: UIButton!
+    @IBOutlet weak var profileTagsCollectionView: UICollectionView!
+    var user: Bool = false
+    var users = [User(name: "Honeypot", email: "hello@honeypot.io", website: "www.honeypot.io", photo: "Sample_StartUp_Logo", description: "Honeypot is a developer-focused job platform, on a mission to get every developer a great job. We believe developers should have all the information they need to choose a job they love: whether that’s based on a cutting-edge tech stack, an inspiring team or just good old-fashioned salary", interests: ["Tech", "Design", "Humor", "Travel", "Music", "Writing", "Social Media", "Life", "Education", "Edtech"])]
+    
+    var tags = ["Education Reform", "Photography", "Startup", "Poetry", "Women In Tech", "Female Founders", "Business", "Fiction", "Love", "Food", "Sports"]
     var sizingCell: TagCell? //will calculate cell width based on text length
     var interests = [Interest]()
     
@@ -25,16 +31,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let cellNib = UINib(nibName: "TagCell", bundle: nil)
-        self.profileTagsCollectionView.register(cellNib, forCellWithReuseIdentifier: "TagCell")
-        self.sizingCell = (cellNib.instantiate(withOwner: nil, options: nil) as NSArray).firstObject as! TagCell?
-        
-        for name in tags {
-            let tag = Interest()
-            tag.name = name
-            self.interests.append(tag)
-        }
-        
+        setupUI()
         //activate side menu
         revealMenu.target = self.revealViewController()
         revealMenu.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -48,6 +45,35 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setupUI(){
+        if user == false{
+        tags = users[0].interests
+        profileImageView.image = UIImage(named: users[0].photo)
+        profileNameLabel.text = users[0].name
+        profileWebsiteLabel.text = users[0].webiste
+        profileAboutTextView.text = users[0].description
+        } else{
+            self.navigationItem.rightBarButtonItem = nil
+            editInterests.isEnabled = false
+            editInterests.isHidden = true
+            editDescription.isHidden = true
+            editDescription.isEnabled = false
+            profileFollowButton.isEnabled = true
+            profileFollowButton.isHidden = false
+        }
+        //Load Collection View
+        let cellNib = UINib(nibName: "TagCell", bundle: nil)
+        self.profileTagsCollectionView.register(cellNib, forCellWithReuseIdentifier: "TagCell")
+        self.sizingCell = (cellNib.instantiate(withOwner: nil, options: nil) as NSArray).firstObject as! TagCell?
+        
+        for name in tags {
+            let tag = Interest()
+            tag.name = name
+            self.interests.append(tag)
+        }
+
     }
     @IBAction func editBarButtonTapped(_ sender: Any) {
         callActionSheet()

@@ -40,7 +40,11 @@ class FeedDetailViewController: UIViewController {
             userLabel.text = feed.user
             FeedDetailTextView.text = feed.description
             FeedDetailImageView.image = UIImage(named:"\(feed.imagePath)")
-            createdByImageView.image = UIImage(named: "\(feed.imagePath)")
+            if feed.user == "Fabian Sonnenburg"{
+            createdByImageView.image = UIImage(named: "Sample_Person")
+            }else {
+               createdByImageView.image = UIImage(named:"\(feed.imagePath)")
+            }
         }
     }
 
@@ -48,6 +52,7 @@ class FeedDetailViewController: UIViewController {
     @IBAction func viewProfileButtonTapped(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        nextViewController.user = true
        self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     

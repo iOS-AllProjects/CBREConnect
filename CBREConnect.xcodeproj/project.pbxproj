@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B604CC451E3CCC56007C0418 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604CC441E3CCC56007C0418 /* User.swift */; };
 		B60E309E1E0455020081D819 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60E309D1E0455020081D819 /* AppDelegate.swift */; };
 		B60E30A01E0455020081D819 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60E309F1E0455020081D819 /* ViewController.swift */; };
 		B60E30A31E0455020081D819 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60E30A11E0455020081D819 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B604CC441E3CCC56007C0418 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B60E309A1E0455020081D819 /* CBREConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBREConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60E309D1E0455020081D819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B60E309F1E0455020081D819 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			children = (
 				B62AD1131E0704D000CFD9D2 /* Interest.swift */,
 				B62AD1231E08284F00CFD9D2 /* Feed.swift */,
+				B604CC441E3CCC56007C0418 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				B62AD1211E0826B700CFD9D2 /* FeedCell.swift in Sources */,
 				B6EAC9A71E0AD7D200EAC209 /* FavoritesViewController.swift in Sources */,
 				B6EAC9AB1E0AD80A00EAC209 /* FAQViewController.swift in Sources */,
+				B604CC451E3CCC56007C0418 /* User.swift in Sources */,
 				B6EAC9A91E0AD7FA00EAC209 /* ContactsViewController.swift in Sources */,
 				B62AD10F1E06E77600CFD9D2 /* TagCell.swift in Sources */,
 				B62AD0FE1E05DD8B00CFD9D2 /* InterestViewController.swift in Sources */,

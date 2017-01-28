@@ -28,6 +28,8 @@ class FeedCell: UITableViewCell{
         feedTagsLabels.removeAll()
         feedTitle.text = feed.title
         feedDescription.text = feed.description
+        feedBackgroundImage.image = UIImage(named: feed.imagePath)
+        feedBackgroundImage.layer.cornerRadius = 5
         feedTagsLabels.append(feed.type)
         feedTagsLabels.append(feed.category)
         feedTagsLabels.append(feed.topic)

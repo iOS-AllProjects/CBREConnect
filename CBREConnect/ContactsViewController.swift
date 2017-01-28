@@ -13,7 +13,7 @@ class ContactsViewController: UIViewController {
     @IBOutlet weak var revealMenu: UIBarButtonItem!
     @IBOutlet weak var contactsTableView: UITableView!
     
-    var myContacts = ["Etjen Ymeraj", "Alexa P"]
+    var myContacts = ["Etjen Ymeraj", "Alexa Pranskaityte"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

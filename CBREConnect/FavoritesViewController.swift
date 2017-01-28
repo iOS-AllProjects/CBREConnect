@@ -50,7 +50,6 @@ extension FavoritesViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.favouritesTableView.dequeueReusableCell(withIdentifier: "myFavouriteCell", for: indexPath)
-        cell.backgroundView = UIImageView(image: UIImage(named: "BBQ"))
         cell.textLabel?.text = myFavourites[indexPath.row]
         return cell
     }

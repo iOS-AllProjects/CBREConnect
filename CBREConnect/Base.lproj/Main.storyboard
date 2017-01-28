@@ -521,7 +521,7 @@
                                                             <color key="backgroundColor" red="0.066666666669999999" green="0.23921568630000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <integer key="value" value="10"/>
+                                                                    <integer key="value" value="5"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
@@ -695,6 +695,16 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFH-Tw-cLM">
+                                <rect key="frame" x="16" y="8" width="343" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hVF-kS-i0J">
                                 <rect key="frame" x="16" y="8" width="343" height="587"/>
                                 <subviews>
@@ -1422,14 +1432,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fabian Sonnenburg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wr-Pe-fu9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Honeypot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wr-Pe-fu9">
                                                     <rect key="frame" x="53" y="123" width="314" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sample_Person" translatesAutoresizingMaskIntoConstraints="NO" id="WbG-kV-GVi" customClass="RoundedImageView" customModule="CBREConnect" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sample_StartUp_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="WbG-kV-GVi" customClass="RoundedImageView" customModule="CBREConnect" customModuleProvider="target">
                                                     <rect key="frame" x="53" y="55" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1703,7 +1713,7 @@
                                                         <rect key="frame" x="0.0" y="22" width="327" height="110"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <string key="text">Hi, this is Fabian. 
-I am a Tech Consultant at CBRE and I am interessted in communicating with StartUps based in Berlin and working int the Property Market. </string>
+I am a Tech Consultant at CBRE and I am interested in communicating with Startups based in Berlin. My focus is on the property market. Get in touch anytime!</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         <connections>
@@ -1815,7 +1825,7 @@ I am a Tech Consultant at CBRE and I am interessted in communicating with StartU
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUj-Gg-oaH">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUj-Gg-oaH">
                                 <rect key="frame" x="107" y="559" width="160" height="34"/>
                                 <color key="backgroundColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Follow"/>
@@ -1858,6 +1868,9 @@ I am a Tech Consultant at CBRE and I am interessted in communicating with StartU
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editDescription" destination="wKH-T4-mMc" id="gAb-3M-GGD"/>
+                        <outlet property="editInterests" destination="360-yb-oEc" id="Gys-yB-Ip3"/>
+                        <outlet property="editProfile" destination="sUN-tb-fbz" id="dt7-VA-Nwy"/>
                         <outlet property="profileAboutTextView" destination="Q9d-xO-XKe" id="j33-tn-ADs"/>
                         <outlet property="profileFollowButton" destination="iUj-Gg-oaH" id="MLo-WH-wpJ"/>
                         <outlet property="profileImageView" destination="Eyz-Et-Rhz" id="ezQ-ag-q3y"/>
@@ -1887,20 +1900,24 @@ I am a Tech Consultant at CBRE and I am interessted in communicating with StartU
                                 <rect key="frame" x="16" y="0.0" width="343" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myContentCell" textLabel="Qej-Tl-KEP" rowHeight="88" style="IBUITableViewCellStyleDefault" id="Xar-JU-r9j">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myContentCell" textLabel="Qej-Tl-KEP" imageView="4gj-oz-bDj" rowHeight="88" style="IBUITableViewCellStyleDefault" id="Xar-JU-r9j">
                                         <rect key="frame" x="0.0" y="28" width="343" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xar-JU-r9j" id="UxA-82-Ews">
-                                            <rect key="frame" x="0.0" y="0.0" width="310" height="88"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qej-Tl-KEP">
-                                                    <rect key="frame" x="15" y="0.0" width="293" height="88"/>
+                                                    <rect key="frame" x="60" y="0.0" width="268" height="88"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Show_Content_Icon" id="4gj-oz-bDj">
+                                                    <rect key="frame" x="15" y="28" width="30" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2316,10 +2333,15 @@ I am a Tech Consultant at CBRE and I am interessted in communicating with StartU
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T7R-zG-WDE" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="6DM-eG-TGE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1529411765" green="0.46274509800000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -2346,20 +2368,24 @@ I am a Tech Consultant at CBRE and I am interessted in communicating with StartU
                                 <rect key="frame" x="16" y="0.0" width="343" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myFavouriteCell" textLabel="b0e-QM-exK" rowHeight="88" style="IBUITableViewCellStyleDefault" id="vNF-qb-xgE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myFavouriteCell" textLabel="b0e-QM-exK" imageView="UCX-B7-F1Z" rowHeight="88" style="IBUITableViewCellStyleDefault" id="vNF-qb-xgE">
                                         <rect key="frame" x="0.0" y="28" width="343" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vNF-qb-xgE" id="mGr-JK-kZK">
-                                            <rect key="frame" x="0.0" y="0.0" width="310" height="88"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b0e-QM-exK">
-                                                    <rect key="frame" x="15" y="0.0" width="293" height="88"/>
+                                                    <rect key="frame" x="62" y="0.0" width="266" height="88"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Show_Favorite_Icon" id="UCX-B7-F1Z">
+                                                    <rect key="frame" x="15" y="28" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2611,11 +2637,14 @@ To access the pre-populated application, you will need to register as an applica
         <image name="Plus_Icon" width="30" height="30"/>
         <image name="Profile_Icon" width="13" height="18"/>
         <image name="Sample_Person" width="81" height="81"/>
+        <image name="Sample_StartUp_Logo" width="80" height="80"/>
+        <image name="Show_Content_Icon" width="30" height="32"/>
+        <image name="Show_Favorite_Icon" width="32" height="32"/>
         <image name="StartUp_Icon" width="23" height="37"/>
         <image name="Website_Icon" width="104" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fEc-4w-QdW"/>
-        <segue reference="DnT-so-2eP"/>
+        <segue reference="lsW-Ve-m30"/>
     </inferredMetricsTieBreakers>
 </document>

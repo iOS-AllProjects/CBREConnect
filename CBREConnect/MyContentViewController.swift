@@ -49,7 +49,6 @@ extension MyContentViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.myContentTableView.dequeueReusableCell(withIdentifier: "myContentCell", for: indexPath)
-        cell.backgroundView = UIImageView(image: UIImage(named: "BBQ"))
         cell.textLabel?.text = myContent[indexPath.row]
         return cell
     }
