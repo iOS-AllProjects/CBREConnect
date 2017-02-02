@@ -395,20 +395,19 @@
 				TargetAttributes = {
 					B60E30991E0455020081D819 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = RA58K5G56U;
+						DevelopmentTeam = UZ48MG98NG;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					B60E30AD1E0455020081D819 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = RA58K5G56U;
+						DevelopmentTeam = 3SYRWEMV66;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B60E30991E0455020081D819;
 					};
 					B60E30B81E0455020081D819 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = RA58K5G56U;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B60E30991E0455020081D819;
@@ -652,10 +651,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = RA58K5G56U;
+				CODE_SIGN_IDENTITY = "iPhone Developer: etjenymeraj@outlook.com (9SQPYMJSBP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UZ48MG98NG;
 				INFOPLIST_FILE = CBREConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.etjenymeraj.CBREConnect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.etjenymeraj.CBRE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CBREConnect/CBREConnect-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -669,10 +670,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = RA58K5G56U;
+				CODE_SIGN_IDENTITY = "iPhone Developer: etjenymeraj@outlook.com (9SQPYMJSBP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UZ48MG98NG;
 				INFOPLIST_FILE = CBREConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.etjenymeraj.CBREConnect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.etjenymeraj.CBRE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CBREConnect/CBREConnect-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -685,7 +688,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = RA58K5G56U;
+				DEVELOPMENT_TEAM = 3SYRWEMV66;
 				INFOPLIST_FILE = CBREConnectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etjenymeraj.CBREConnectTests;
@@ -700,7 +703,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = RA58K5G56U;
+				DEVELOPMENT_TEAM = 3SYRWEMV66;
 				INFOPLIST_FILE = CBREConnectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etjenymeraj.CBREConnectTests;
@@ -714,7 +717,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = RA58K5G56U;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CBREConnectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etjenymeraj.CBREConnectUITests;
@@ -728,7 +732,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = RA58K5G56U;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CBREConnectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etjenymeraj.CBREConnectUITests;
